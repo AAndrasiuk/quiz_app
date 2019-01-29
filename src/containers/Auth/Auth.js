@@ -24,7 +24,7 @@ class Auth extends React.Component {
 			password: {
 				value: '',
 				type: 'password',
-				label: 'Пароль',
+				label: 'Парол',
 				errorMessage: 'Введите корректный пароль',
 				valid: false,
 				touched:false,
