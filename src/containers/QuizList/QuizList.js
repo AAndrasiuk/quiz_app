@@ -20,7 +20,7 @@ class QuizList extends React.Component{
 				</li>
 			)
 		})
-	}
+	} 
 
 	async componentDidMount(){
 		try {

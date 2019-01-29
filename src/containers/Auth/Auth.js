@@ -3,6 +3,7 @@ import classes from "./Auth.css";
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/Input"
 import is from 'is_js'
+import axios from 'axios'
 
 class Auth extends React.Component {
   
@@ -24,7 +25,7 @@ class Auth extends React.Component {
 			password: {
 				value: '',
 				type: 'password',
-				label: 'Парол',
+				label: 'Пароль',
 				errorMessage: 'Введите корректный пароль',
 				valid: false,
 				touched:false,
@@ -36,9 +37,35 @@ class Auth extends React.Component {
 		}
 	}
 
-	loginHandler = () => {}
+	loginHandler = async () => {
+		const authData = {
+			email: this.state.formControls.email.value,
+			password: this.state.formControls.password.value,
+			returnSecureToken: true
+		}
+		try {
+			const response = await axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyAPW4mzCswnvPxmhZtmpHRAuP-V4KuXTRE', authData)
+			console.log(response.data);
+			
+		} catch (error) {
+			console.log(error);
+		}
+	}
 
-	registrHandler = () => {}
+	registrHandler = async () => {
+		const authData = {
+			email: this.state.formControls.email.value,
+			password: this.state.formControls.password.value,
+			returnSecureToken: true
+		}
+		try {
+			const response = await axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyAPW4mzCswnvPxmhZtmpHRAuP-V4KuXTRE', authData)
+			console.log(response.data);
+			
+		} catch (error) {
+			console.log(error);
+		}
+	}
 
 	submitHandler = event => event.preventDefault();
 
