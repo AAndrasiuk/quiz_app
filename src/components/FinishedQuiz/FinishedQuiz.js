@@ -30,10 +30,10 @@ const FinishedQuiz = props => {
                     )
                 })}
             </ul>
-            <p>Правильно {rightAnswers} из {props.quiz.length}</p>
-            <Button onClick={props.onRetry} type="primary">Повторить</Button>
+            <p>Right {rightAnswers} of {props.quiz.length}</p>
+            <Button onClick={props.onRetry} type="primary">Retry</Button>
             <Link to='/'>
-                <Button onClick={props.onRetry} type="success">Перейти в список тестов</Button>
+                <Button onClick={props.onRetry} type="success">Go to quizes list</Button>
             </Link>
         </div>
     )

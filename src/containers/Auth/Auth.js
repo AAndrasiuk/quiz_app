@@ -15,7 +15,7 @@ class Auth extends React.Component {
 				value: '',
 				type: 'email',
 				label: 'Email',
-				errorMessage: 'Введите корректный email',
+				errorMessage: 'Enter correct email',
 				valid: false,
 				touched:false,
 				validation: {
@@ -26,8 +26,8 @@ class Auth extends React.Component {
 			password: {
 				value: '',
 				type: 'password',
-				label: 'Пароль',
-				errorMessage: 'Введите корректный пароль',
+				label: 'Password',
+				errorMessage: 'Enter correct password',
 				valid: false,
 				touched:false,
 				validation: {
@@ -122,7 +122,7 @@ class Auth extends React.Component {
     return (
       <div className={classes.Auth}>
         <div>
-          <h1>Авторизация</h1>
+          <h1>Authorization</h1>
 
           <form onSubmit={this.submitHandler} className={classes.AuthForm}>
 				
@@ -133,14 +133,14 @@ class Auth extends React.Component {
 					onClick={this.loginHandler}
 					disabled={!this.state.isFormValid}
 				>
-				Войти
+				Sign In
 				</Button>
 				<Button 
 					type="primary" 
 					onClick={this.registrHandler}
 					disabled={!this.state.isFormValid}
 				>
-				Регистрация
+				Sign up
 				</Button>
           </form>
         </div>
