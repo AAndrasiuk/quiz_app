@@ -14,10 +14,11 @@ Opportunities for users:
 ##### In plans #####
 - Make this website responsive.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![Quiz Application.](./public/screenshot.jpg "Quiz App.")
 
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Available Scripts
 
 ### `npm start`
